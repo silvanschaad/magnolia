@@ -1,0 +1,245 @@
+@charset "UTF-8";
+
+// Map overrides
+.xw-map-component {
+    margin-bottom: $paragraph-margin-bottom;
+    &.leaflet-container {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        font-weight: inherit;
+    }
+    .leaflet-popup-content-wrapper {
+        border-radius: 0;
+        @include box-shadow($black);
+    }
+}
+
+// Map filter overrides
+
+.xw-map-filter-component {
+    @media #{$small-only} {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: $paragraph-margin-bottom/2;
+    }
+}
+.xw-map-filter-component-list {
+    @media #{$medium-up} {
+        margin-bottom: $column-gutter/2;
+    }
+    @include clearfix;
+    .xw-map-filter-fulltext {
+        background-color: transparent;
+        color: $secondary-color;
+        border: 4px solid $lightblue !important;
+
+        input {
+            width: 100%;
+            color: $secondary-color;
+            padding: 10px 52px 10px 10px !important;
+            border: 4px solid $lightblue;
+            background-color: transparent;
+        }
+    }
+    .Select-control {
+        color: $secondary-color;
+        background-color: transparent;
+        border: 4px solid $lightblue;
+        border-radius: 0;
+        .Select-placeholder {
+            color: $secondary-color;
+        }
+        .Select-clear {
+            //margin-top: rem-calc(0);
+            color: $lightblue;
+        }
+        .Select-arrow {
+            border-color: $lightblue transparent transparent;
+            margin-top: rem-calc(2);
+        }
+    }
+    .Select-menu-outer {
+        border-radius: 0;
+        border-left: 4px solid $lightblue;
+        border-right: 4px solid $lightblue;
+        border-bottom: 4px solid $lightblue;
+        .Select-option {
+            color: $black;
+            background-color: $yellow-light;
+            border-radius: 0;
+            &.is-focused {
+                background-color: $yellow;
+            }
+        }
+        .Select-noresults {
+            color: $black;
+        }
+    }
+    .is-open>.Select-control>.Select-arrow {
+        border-color: transparent transparent $primary-color;
+    }
+}
+
+// Map list overrides
+.xw-map-list-component {
+    .xw-map-list-item {
+        position: relative;
+        margin-bottom: $paragraph-margin-bottom;
+        @include clearfix;
+        background-color: $lightblue;
+        .xw-map-images {
+            @media #{$small-only} {
+                display: none;
+            }
+        }
+        .xw-map-texts {
+            .xw-map-list-item-property {
+                padding: rem-calc(0 $column-gutter 0 0);
+                float: left;
+                @media #{$small-only} {
+                    float: none;
+                    width: 100%;
+                }
+                @include clearfix;
+                &.xw-map-name,
+                &.xw-map-description {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: $paragraph-margin-bottom;
+                    .xw-map-label {
+                        display: none;
+                    }
+                }
+                &.xw-map-name {
+                    .xw-map-content {
+                        @extend h3;
+                        padding-top: $paragraph-margin-bottom;
+                        margin-bottom: 0;
+                    }
+                }
+                &.xw-map-opening-hours {
+                    @media #{$small-only} {
+                        padding-bottom: $paragraph-margin-bottom;
+                    }
+                }
+                &.xw-map-name {
+                    @extend h2;
+                    margin-bottom: 0.25rem;
+                    position: relative;
+                }
+                .xw-map-label {
+                    @extend h5;
+                    color: $secondary-color;
+                    margin-bottom: 0.25rem;
+                    position: relative;
+                }
+                .xw-map-content {
+                    margin-bottom: 0.25rem;
+                }
+            }
+        }
+    }
+}
+
+
+// Map categories
+
+.xw-map-categories {
+    position: absolute;
+    top: 315px;
+    left: 0;
+    @media #{$large-up} {
+        left: -$column-gutter*1.5;
+    }
+    @media #{$small-only} {
+        left: 0;
+    }
+    width: 187px;
+    height: 199px;
+
+    background-color: transparent;
+    background-image: url('../img/kimi-cantons/ch.png');
+    background-repeat: no-repeat;
+    background-size: 187px 199px;
+
+    &.cat-40931127-29b8-41bc-b93a-8c6c59d0c5c4 {
+        background-image: url('../img/kimi-cantons/zh.png');
+    }
+    &.cat-4fe541ff-1ddf-43a3-985f-fecfe6fa8fcf {
+        background-image: url('../img/kimi-cantons/be.png');
+    }
+    &.cat-d7377207-7dfa-4c4c-884e-bc4bf9f6804b {
+        background-image: url('../img/kimi-cantons/lu.png');
+    }
+    &.cat-d40cab54-5e0b-45c6-afc6-523b203d6a1d {
+        background-image: url('../img/kimi-cantons/ur.png');
+    }
+    &.cat-2d057963-881f-4658-aeea-81615ef7a2b0 {
+        background-image: url('../img/kimi-cantons/sz.png');
+    }
+    &.cat-779b8c4a-1bd6-41c4-bc00-763805aa6e86 {
+        background-image: url('../img/kimi-cantons/ow.png');
+    }
+    &.cat-10602a59-4d96-4833-9bc9-297ccddf7a6e {
+        background-image: url('../img/kimi-cantons/nw.png');
+    }
+    &.cat-f3ef44da-92c4-45d9-a8cb-c2b90280e214 {
+        background-image: url('../img/kimi-cantons/gl.png');
+    }
+    &.cat-fba68f3c-c37f-4c7f-a4a4-0e3d4fc7f5f3 {
+        background-image: url('../img/kimi-cantons/zg.png');
+    }
+    &.cat-9262c0bc-986e-45e6-8e4e-5b5a722cad06 {
+        background-image: url('../img/kimi-cantons/fr.png');
+    }
+    &.cat-c406240b-4531-4ec5-8bac-bcdf7a20902d {
+        background-image: url('../img/kimi-cantons/so.png');
+    }
+    &.cat-245a0675-9d15-49de-a97a-1478f50efbfe {
+        background-image: url('../img/kimi-cantons/bs.png');
+    }
+    &.cat-4b51ecdb-ad1b-4dc2-9842-94a8a713fe02 {
+        background-image: url('../img/kimi-cantons/bl.png');
+    }
+    &.cat-c3761a6e-3bfe-4deb-9d33-a6afc370490c {
+        background-image: url('../img/kimi-cantons/sh.png');
+    }
+    &.cat-b95febc1-6226-41ad-b18c-b4dd11c4e3c2 {
+        background-image: url('../img/kimi-cantons/ar.png');
+    }
+    &.cat-3f25c489-e8c2-40bd-a102-566deadb5654 {
+        background-image: url('../img/kimi-cantons/ai.png');
+    }
+    &.cat-97fc4221-dfbc-427d-9c62-0fb2876dd732 {
+        background-image: url('../img/kimi-cantons/sg.png');
+    }
+    &.cat-c645b884-4f35-4e8a-8d5f-4dd3c09a150c {
+        background-image: url('../img/kimi-cantons/gr.png');
+    }
+    &.cat-98df072f-6d3e-4c35-80d5-bcb6d8ae19b5 {
+        background-image: url('../img/kimi-cantons/ag.png');
+    }
+    &.cat-9cf99fc5-8806-46c6-9aa8-922047ccadc0 {
+        background-image: url('../img/kimi-cantons/tg.png');
+    }
+    &.cat-c9e2997d-7fc9-4f16-87df-7149a70d409a {
+        background-image: url('../img/kimi-cantons/ti.png');
+    }
+    &.cat-2c703754-67f8-467d-815a-91cbb455ab85 {
+        background-image: url('../img/kimi-cantons/vd.png');
+    }
+    &.cat-49367fab-6a32-4814-af8c-ca189acf61ab {
+        background-image: url('../img/kimi-cantons/vs.png');
+    }
+    &.cat-8c147ff4-0a71-49f3-a749-44fb95c736a3 {
+        background-image: url('../img/kimi-cantons/ne.png');
+    }
+    &.cat-9b954772-4f03-433a-843a-fac377d4373f {
+        background-image: url('../img/kimi-cantons/ge.png');
+    }
+    &.cat-1f4a977f-4f81-4862-8b70-b8044e925261 {
+        background-image: url('../img/kimi-cantons/ju.png');
+    }
+}

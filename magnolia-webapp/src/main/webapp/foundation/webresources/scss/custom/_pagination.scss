@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// Paging
+
+ul.pagination {
+    li {
+        &.current {
+            a {
+                text-decoration: none;
+            }
+        }
+        a {
+            text-decoration: underline;
+            font-weight: 300;
+            &:hover {
+                color: $black;
+            }
+            &:after {
+                content: "";
+                font-size: rem-calc(11);
+                padding-left: rem-calc(5);
+                margin-left: rem-calc(5);
+                height: rem-calc(11);
+                border-left: rem-calc(1) solid tint($primary-color,30%);
+                vertical-align: middle;
+            }
+        }
+        &:last-child {
+            a {
+                &:after {
+                    display: none;
+                    border: none;
+                }
+            }
+        }
+
+    }
+}

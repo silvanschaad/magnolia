@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// Footer
+
+#footer {
+    padding-top: $column-gutter;
+    padding-bottom: $column-gutter;
+    p {
+        margin-bottom: 0;
+    }
+    .social-media {
+        text-decoration: none;
+        margin-right: $column-gutter/6;
+    }
+}
+
+#kimi-skater-wrapper {
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+    height: 110px;
+}
+#kimi-skater {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

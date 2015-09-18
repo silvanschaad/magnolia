@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+// Slider globals
+
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {
+    outline: none;
+}
+
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flexslider {
+    position: relative;
+    margin: 0 0 $column-gutter 0;
+    padding: 0;
+    zoom: 1;
+    border-top: 4px solid $yellow;
+    border-bottom: 4px solid $yellow;
+    background-color: $yellow;
+    .slides {
+        zoom: 1;
+        > li {
+            position: relative;
+            display: none;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-transition: opacity 1s ease;
+            -moz-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+            @media #{$medium-up} {
+                max-height: rem-calc(580);
+            }
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        &:after {
+            content: "\ea40";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+    &:hover {
+        .flex-direction-nav {
+            .flex-prev {
+                opacity: 0.7;
+                left: $column-gutter;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            .flex-next {
+                opacity: 0.7;
+                right: $column-gutter;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+// Stage variations
+#stage {
+    .flexslider {
+        @media #{$medium-up} {
+            border-top: 0;
+            margin: 0;
+        }
+        &.no-controlNav {
+            margin: 0;
+        }
+    }
+}
+
+html[xmlns] .flexslider .slides,
+.no-js .flexslider .slides > li:first-child {
+    display: block;
+}
+
+* html .flexslider .slides {
+    height: 1%;
+}
+
+.flex-viewport {
+    max-height: 2000px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.flex-direction-nav {
+    *height: 0;
+    @media #{$small-only} {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 0;
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        line-height: 1;
+        overflow: hidden;
+        opacity: 0;
+        cursor: pointer;
+        color: $white;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        &:before {
+            @include icon-font-base;
+            @include text-shadow($black);
+            font-size: 60px;
+            content: '\ea40';
+            line-height: 1;
+            color: $white;
+        }
+        &.flex-next {
+            right: 0;
+            text-align: right;
+            &:before {
+                content: '\ea3c';
+            }
+        }
+    }
+    .flex-prev {
+        left: 0;
+        text-align: left;
+    }
+    .flex-disabled {
+        opacity: 0 !important;
+        filter: alpha(opacity=0);
+        cursor: default;
+    }
+}
+
+.flex-control-nav {
+    position: absolute;
+    bottom: -$column-gutter*1.25;
+    width: 100%;
+    text-align: center;
+    li {
+        margin: 0 5px;
+        display: inline-block;
+        zoom: 1;
+        *display: inline;
+        a {
+            width: 10px;
+            height: 10px;
+            display: block;
+            background: $blue;
+            cursor: pointer;
+            text-indent: -9999px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            &:hover {
+                background: $red;
+            }
+            &.flex-active {
+                background: $red;
+                cursor: default;
+            }
+        }
+    }
+}
+
+.slider-image {
+    z-index: 1;
+}
+
+.slider-content {
+    z-index: 2;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('../img/gradient.png') no-repeat center center;
+    h1 {
+        @include vertical-align;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        @media #{$small-only} {
+            font-size: $h2-font-size;
+        }
+        .icon-play {
+            font-size: rem-calc(120);
+            @media #{$small-only} {
+                font-size: rem-calc(60);
+            }
+            color: $blue;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+}

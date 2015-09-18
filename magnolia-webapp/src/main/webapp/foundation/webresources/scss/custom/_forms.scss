@@ -1,0 +1,60 @@
+// Forms
+
+form {
+    ::-webkit-input-placeholder {
+        color: $secondary-color;
+    }
+    :-moz-placeholder {
+        color: $secondary-color;
+        opacity: 1;
+    }
+    ::-moz-placeholder {
+        color: $secondary-color;
+        opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: $secondary-color;
+    }
+    .form-element {
+        &:not(.selection):not(.campaignmonitor):not(.attachment) {
+            label {
+                display: none;
+            }
+        }
+        > label {
+            @extend h6;
+        }
+        input,
+        textarea,
+        select {
+            &.error {
+                color: $white;
+                background-color: $alert-color;
+                margin-bottom: $form-spacing;
+                &::-webkit-input-placeholder {
+                    color: $white;
+                }
+                &:-moz-placeholder {
+                    color: $white;
+                    opacity: 1;
+                }
+                &::-moz-placeholder {
+                    color: $white;
+                    opacity: 1;
+                }
+                &:-ms-input-placeholder {
+                    color: $white;
+                }
+            }
+        }
+        .optiongroup {
+            margin-bottom: $column-gutter/4;
+            input {
+                margin-bottom: 0;
+            }
+            &.error {
+                color: $alert-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+// Mixins/Default values
+$border-size: 2px;
+
+@mixin icon-font-base {
+    font-family: "kimikrippen";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin border ($size, $color) {
+    border: rem-calc($size) solid $color;
+}
+
+@mixin text-shadow ($color) {
+    text-shadow: 0 1px rgba($color,0.4);
+}
+
+@mixin box-shadow ($color) {
+    -moz-box-shadow: 0 0 4px -1px rgba($color,0.6);
+    -webkit-box-shadow: 0 0 4px -1px rgba($color,0.6);
+    box-shadow: 0 0 4px -1px rgba($color,0.6);
+}
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}

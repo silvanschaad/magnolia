@@ -1,0 +1,70 @@
+.mgnlEditor {position: relative; z-index: 2;}
+.row-bg-container {z-index: 1;}
+.columns {z-index: 3;}
+.mgnlEditorButton-previewMenuButton {display: none;}  /* hide Preview Channel select dropdown in mainbar. */
+.mgnlEditor button {font-weight: normal;}
+.mgnlEditorPlaceholder .label { font-weight: normal; font-size: 14px !important; color: #636362 !important;}
+div.mgnlEditorPlaceholder.area {font-size: 14px !important; background-color: #ccddb6 !important; color: #636362 !important;}
+
+.mgnlLikeBtn, .dragger, .hider {
+    background-color:#6a9000;
+    color:white !important;
+    text-transform: uppercase;
+    font-family: DINWebPro, Verdana, sans-serif !important;
+    font-size:10px;
+    height:auto;
+    padding:5px 10px 3px 10px;
+    white-space:nowrap;
+    z-index:1000;
+    cursor:default;
+    text-decoration: none;
+}
+
+.mgnlLikeBtn:hover{text-decoration: none;}
+
+.dragger, .hider{
+    cursor:move;
+    display:none;
+    left:-1px;
+    position:absolute;
+    top:-1px;
+}
+
+.hider{
+    cursor:default;
+    left: auto;
+    right:2px;
+}
+
+.info {color: #00529B; background-color: #BDE5F8;}
+.success {color: #4F8A10; background-color: #DFF2BF;}
+.warning {color: #9F6000; background-color: #FEEFB3;}
+.error {color: #D8000C; background-color: #FFBABA; padding:5px; margin-bottom:5px;
+    display: block;}
+
+.meta.editmode li {float: none;}
+
+#message-forward {background-color: #ccddb6; color: #6a9000 !important; padding: 5px 10px; font-size: 14px !important; font-family: DINWebPro, Verdana, sans-serif !important;}
+#message-forward a {color: #00529B}
+
+.editHint{position: relative; z-index: 2; font-family: DINWebPro, Verdana, sans-serif !important; font-size: 12px !important; cursor: pointer; background-color: #dde8ce; color: #6a9000 !important; padding: 4px 10px 2px 10px; margin: 5px auto; border-radius: 5px;}
+.editBG {background-color: #ccddb6;}
+.dragging {border: 1px solid red;}
+
+.field-label {
+    display: block;
+    font-size: 12px !important;
+    color: #6a9000 !important;
+    background: #dde8ce;
+    padding: 5px;
+}
+
+/* Layout specific adjustments */
+#header #wrapper-top,
+#header #wrapper-bottom {
+    position: static;
+}
+#header {
+    position: relative !important;
+    z-index: 99999 !important;
+}

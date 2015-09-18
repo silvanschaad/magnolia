@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// Content
+
+.no-margin {
+    line-height: 1;
+}
+
+#wrapper {
+    min-height: 100%;
+}
+
+#content {
+    padding-top: $column-gutter;
+}
+
+#meta {
+    padding-top: $column-gutter/2;
+}
+
+.contententry {
+    ul:not(.downloads) {
+        list-style-type: none;
+        li {
+            &:before {
+                position: relative;
+                content: "-";
+                margin-left: -14px;
+                line-height: 1;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+p.lead {
+    font-weight: $font-weight-bold;
+    font-size: 1rem;
+    line-height: $paragraph-line-height;
+}
+
+strong {
+    font-weight: $font-weight-bold;
+}

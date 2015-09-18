@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+// Content
+
+.textAndImage {
+    @include clearfix;
+}
+
+.imageHolder {
+    position: relative;
+    .caption {
+        @include clearfix;
+        opacity: 0.5;
+        padding-top: $paragraph-margin-bottom/2;
+    }
+    &.no-margin {
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+.image_left,
+.image_right {
+    width: 40%;
+    margin-bottom: $paragraph-margin-bottom/2;
+}
+.image_left {
+    float: left;
+    margin-right: $paragraph-margin-bottom;
+}
+.image_right {
+    float: right;
+    margin-left: $paragraph-margin-bottom;
+}
+.image_top {
+    margin-bottom: $paragraph-margin-bottom;
+    img {
+        margin-top: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+.image_bottom {
+    margin-bottom: $paragraph-margin-bottom;
+}
+
+.downloads {
+    display: inline-block;
+    margin-left: 0;
+    li {
+        list-style-type: none;
+        margin-left: 0;
+        margin-bottom: $paragraph-margin-bottom/2;
+        a {
+            display: block;
+            .meta {
+                opacity: 0.5;
+            }
+        }
+    }
+}

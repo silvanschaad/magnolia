@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="magnolia-webapp:war">
+    <output-path>$PROJECT_DIR$/magnolia-webapp/target</output-path>
+    <root id="archive" name="magnolia-webapp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="magnolia-webapp:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="org.apache.commons:commons-collections4:4.0" />
+          <element id="library" level="application" name="maven:maven-war-plugin:1.6.3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

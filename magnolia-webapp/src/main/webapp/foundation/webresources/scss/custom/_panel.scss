@@ -1,0 +1,39 @@
+.panel {
+    &:not(.border-only) {
+        background-color: $primary-color;
+    }
+    &.border-only {
+        border: 1px solid $primary-color;
+        background-color: transparent;
+    }
+}
+
+// Panel basic settings
+.panel {
+    padding: $column-gutter/2;
+    margin-bottom: $column-gutter;
+    &.empty {
+        padding: 0;
+    }
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+    ul:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@each $name in $color_names {
+    $i: index($color_names, $name);
+
+    // Panel
+    .panel.#{$name} {
+        &:not(.border-only) {
+            background-color: nth($color_vars, $i);
+        }
+        &.border-only {
+            border-color: nth($color_vars, $i);
+        }
+    }
+
+}

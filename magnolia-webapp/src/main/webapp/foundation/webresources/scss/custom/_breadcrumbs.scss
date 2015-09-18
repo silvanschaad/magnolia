@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+// Breadcrumb
+
+.breadcrumbs {
+    margin-bottom: 0;
+    @media #{$small-only} {
+        display: none;
+    }
+    li {
+        padding-right: $column-gutter/7;
+        &.first:before {
+            content: " ";
+            margin: 0
+        }
+        &.meta {
+            color: $primary-color;
+        }
+    }
+}

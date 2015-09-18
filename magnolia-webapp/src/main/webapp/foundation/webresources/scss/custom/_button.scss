@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+// Button
+
+.button {
+    font-size: $h3-font-size;
+    font-weight: $font-weight-bold;
+    &:hover {
+        text-decoration: none;
+    }
+}

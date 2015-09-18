@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3009294, 2015-04-15T04:04:18-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: BrandonGrotesque-RegularItalic by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/italic/
+ * 
+ * Webfont: BrandonGrotesque-Regular by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/regular/
+ * 
+ * Webfont: BrandonGrotesque-BoldItalic by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/bold-italic/
+ * 
+ * Webfont: BrandonGrotesque-Bold by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-grotesque/bold/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3009294
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2009 by Hannes von Doehren. All rights reserved.
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2deb0e");
+
+//BrandonGrotesque-Regular
+@font-face {
+    font-family: 'BrandonGrotesque';
+    src: url('../fonts/2DEB0E_1_0.eot');
+    src: url('../fonts/2DEB0E_1_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2DEB0E_1_0.woff2') format('woff2'),
+    url('../fonts/2DEB0E_1_0.woff') format('woff'),
+    url('../fonts/2DEB0E_1_0.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//BrandonGrotesque-RegularItalic
+@font-face {
+    font-family: 'BrandonGrotesque';
+    src: url('../fonts/2DEB0E_0_0.eot');
+    src: url('../fonts/2DEB0E_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2DEB0E_0_0.woff2') format('woff2'),
+    url('../fonts/2DEB0E_0_0.woff') format('woff'),
+    url('../fonts/2DEB0E_0_0.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+//BrandonGrotesque-Bold
+@font-face {
+    font-family: 'BrandonGrotesque-Bold';
+    src: url('../fonts/2DEB0E_3_0.eot');
+    src: url('../fonts/2DEB0E_3_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2DEB0E_3_0.woff2') format('woff2'),
+    url('../fonts/2DEB0E_3_0.woff') format('woff'),
+    url('../fonts/2DEB0E_3_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+//BrandonGrotesque-BoldItalic
+@font-face {
+    font-family: 'BrandonGrotesque';
+    src: url('../fonts/2DEB0E_2_0.eot');
+    src: url('../fonts/2DEB0E_2_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/2DEB0E_2_0.woff2') format('woff2'),
+    url('../fonts/2DEB0E_2_0.woff') format('woff'),
+    url('../fonts/2DEB0E_2_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+// Fonts, Icons
+
+@font-face {
+    font-family: 'kimikrippen';
+    src:url('../fonts/kimikrippen.eot?pd51z0');
+    src:url('../fonts/kimikrippen.eot?#iefixpd51z0') format('embedded-opentype'),
+    url('../fonts/kimikrippen.woff2?pd51z0') format('woff2'),
+    url('../fonts/kimikrippen.ttf?pd51z0') format('truetype'),
+    url('../fonts/kimikrippen.woff?pd51z0') format('woff'),
+    url('../fonts/kimikrippen.svg?pd51z0#kimikrippen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#wrapper [class^="icon-"]:not(.editorIcon),
+#wrapper [class*=" icon-"]:not(.editorIcon) {
+    @include icon-font-base;
+}
+
+.icon-menu:before {
+    content: "\e601";
+}
+.icon-play:before {
+    content: "\e600";
+}
+.icon-download:before {
+    content: "\e9c2";
+}
+.icon-close:before {
+    content: "\ea0d";
+}
+.icon-arrow-right:before {
+    content: "\ea3c";
+}
+.icon-arrow-left:before {
+    content: "\ea40";
+}

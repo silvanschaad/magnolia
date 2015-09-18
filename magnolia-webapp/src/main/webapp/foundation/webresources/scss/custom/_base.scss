@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+// Table
+
+table {
+    width: 100%;
+    td {
+        vertical-align: top;
+    }
+}
+
+// Hypens
+
+@media #{$small-only} {
+    h1,h2,h3,h4,h5,p,span,li {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+}
+
+// No script stuff
+
+html.no-js {
+    #wrapper {
+        padding-top: $column-gutter*2;
+        opacity: .5;
+        -webkit-filter: blur(2px);
+        -moz-filter: blur(2px);
+        -o-filter: blur(2px);
+        -ms-filter: blur(2px);
+        filter: blur(2px);
+    }
+    body {
+        background-color: $white;
+    }
+}
+
+noscript .alert-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999999;
+    display: block;
+}
+
+// Old browser
+
+body {
+    .buorg {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border: 0;
+        background: $yellow;
+        text-align: left;
+        cursor: pointer;
+        font-family: inherit;
+        color: $body-font-color;
+        font-size: inherit;
+        @include box-shadow($black);
+        div {
+            padding: 15px 35px 15px 15px;
+        }
+        a {
+            color: $red;
+        }
+        #buorgclose {
+            position: absolute;
+            right: .5em;
+            top: .5em;
+            height: 20px;
+            width: 12px;
+            font-weight: bold;
+            font-size: 22px;
+            padding: 0;
+        }
+    }
+    &.browser-update {
+        #wrapper {
+            /* IE 8 */
+            -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+            /* IE 5-7 */
+            filter: alpha(opacity=40);
+            /* Netscape */
+            -moz-opacity: 0.4;
+            /* Safari 1.x */
+            -khtml-opacity: 0.4;
+            /* Good browsers */
+            opacity: 0.4;
+        }
+    }
+}
+
+// Spacer & divider
+
+hr {
+    margin-top: 0 !important;
+}
+
+.spaceBefore1,
+.spaceBefore2,
+.spaceBefore3,
+.spaceBefore4,
+.spaceBefore5,
+.spaceAfter1,
+.spaceAfter2,
+.spaceAfter3,
+.spaceAfter4,
+.spaceAfter5, {
+    @include clearfix();
+}
+
+.spaceBefore1,
+.spaceAfter1 {
+    margin-bottom: $paragraph-margin-bottom;
+}
+.spaceBefore2,
+.spaceAfter2 {
+    margin-bottom: $paragraph-margin-bottom*2;
+}
+.spaceBefore3,
+.spaceAfter3 {
+    margin-bottom: $paragraph-margin-bottom*3;
+}
+.spaceBefore4,
+.spaceAfter4 {
+    margin-bottom: $paragraph-margin-bottom*4;
+}
+.spaceBefore5,
+.spaceAfter5 {
+    margin-bottom: $paragraph-margin-bottom*5;
+}
+
+// HTML componente & iframe
+
+.html-component {
+    margin-bottom: $paragraph-margin-bottom;
+    *,
+    *:before,
+    *:after {
+        @include box-sizing(content-box);
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        font-family: inherit;
+    }
+}
+
+iframe {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    width: 100%;
+}
